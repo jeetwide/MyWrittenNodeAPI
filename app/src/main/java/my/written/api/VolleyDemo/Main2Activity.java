@@ -131,15 +131,7 @@ public class Main2Activity extends AppCompatActivity {
                         }
 
 
-                        Log.d("SucResponse from API",response.toString());
-                        Contacts contacts = new Contacts();
 
-
-                       // contacts.setName(jsonArray.getString(Integer.parseInt("name")));
-
-
-
-                        contactsList.add(contacts);
                     }
 
                 }catch (Exception e){
