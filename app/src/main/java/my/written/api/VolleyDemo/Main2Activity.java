@@ -109,6 +109,7 @@ public class Main2Activity extends AppCompatActivity {
                     //Log.d("Message ",jsonObject.getString("message"));
                     //Log.d("Status ",jsonObject.getString("status"));
 
+                    //test
                     String ph ="";
                     String em ="";
                     String gen ="";
