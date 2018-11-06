@@ -106,27 +106,28 @@ public class Main2Activity extends AppCompatActivity {
 
                     Toast.makeText(Main2Activity.this, jsonObject.optString("message"), Toast.LENGTH_SHORT).show();
                     Toast.makeText(Main2Activity.this, jsonObject.optString("status"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main2Activity.this, jsonObject.optString("status"), Toast.LENGTH_SHORT).show();
                     //Log.d("Message ",jsonObject.getString("message"));
                     //Log.d("Status ",jsonObject.getString("status"));
 
-                    //test
-                    String ph ="";
-                    String em ="";
-                    String gen ="";
+
+
                     for (int i = 0; i < response.length(); i++) {
 
                         try{
-                             ph = jsonArray.getString(Integer.parseInt("phone"));
-                             em = jsonArray.getString(Integer.parseInt("email"));
-                             gen = jsonArray.getString(Integer.parseInt("gender"));
-                            Log.d("PhoneTag ",ph);
-                            Toast.makeText(Main2Activity.this, (jsonArray.getString(Integer.parseInt("phone")).toString()), Toast.LENGTH_SHORT).show();
+                            jsonObject=jsonArray.getJSONObject(i);
+                            Contacts contacts = new Contacts();
+
+                            contacts.setName(jsonObject.getString("name"));
+                            contacts.setGender(jsonObject.getString("gender"));
+                            contacts.setEmail(jsonObject.getString("email"));
+                            contacts.setPhone(jsonObject.getString("phone"));
+                            contactsList.add(contacts);
+
 
                         }catch (NumberFormatException e){
                             e.printStackTrace();
-                            ph="";
-                            em="";
-                            gen="";
+
                         }
 
 
@@ -134,10 +135,6 @@ public class Main2Activity extends AppCompatActivity {
                         Contacts contacts = new Contacts();
 
 
-                        Toast.makeText(Main2Activity.this, "Phone : "+ph, Toast.LENGTH_SHORT).show();
-                        contacts.setPhone(ph);
-                        contacts.setEmail(em);
-                        contacts.setGender(gen);
                        // contacts.setName(jsonArray.getString(Integer.parseInt("name")));
 
 
