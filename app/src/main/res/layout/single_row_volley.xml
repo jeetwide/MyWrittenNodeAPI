@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    card_view:cardMaxElevation="4dp"
+    card_view:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d3d3d3"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/tv_contacts_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Contacts Name"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/ib_row_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/penedit" />
+
+
+        <ImageButton
+            android:id="@+id/ib_row_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ib_row_edit"
+            android:src="@drawable/trashall" />
+
+        <TextView
+            android:id="@+id/tv_contacts_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_contacts_name"
+            android:text="Contacts Gender"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_contacts_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_contacts_gender"
+            android:text="Contacts Email"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_contacts_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_contacts_email"
+            android:text="Contacts Phone"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
